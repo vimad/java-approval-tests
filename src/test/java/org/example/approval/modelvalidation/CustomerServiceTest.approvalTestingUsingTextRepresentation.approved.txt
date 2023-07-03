@@ -1,0 +1,1 @@
+Customer(id=1, age=30, firstName=vinod, lastName=madubashana, country=Sri Lanka, email=test@gmail.com, userName=vinod, address=address, isActive=true)
