@@ -1,10 +1,10 @@
 package org.example.approval.modelvalidation;
 
 import org.approvaltests.Approvals;
+import org.approvaltests.core.Options;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
 
 public class ArrayAndMapTest {
@@ -12,7 +12,9 @@ public class ArrayAndMapTest {
     @Test
     void testArray() {
         String[] strings = {"val 1", "val 2", "val 3"};
-        Approvals.verify(Arrays.stream(strings).toList());
+        Approvals.verify(Arrays.stream(strings).toList(), new Options()
+                .forFile()
+                .withBaseName("test_array_custom_base_name"));
     }
 
     @Test
